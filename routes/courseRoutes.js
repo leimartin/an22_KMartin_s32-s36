@@ -15,7 +15,6 @@ const express = require('express');
 const router = express.Router();
 const courseController = require('../controllers/courseControllers')
 
-
 router.post('/courseCode', (req, res) => {
 	courseController.checkCourseCodeExists(req.body)
 	.then(resultfromController => res.send(resultfromController))

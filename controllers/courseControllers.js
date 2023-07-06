@@ -16,11 +16,11 @@ module.exports.checkCourseCodeExists = (req) => {
 	.then(result => {
 		// the find method returns a record if a match is found
 		if(result) {
-			return Promise.resolve(true);
+			return true;
 			// no duplication email found
 			// the user is not yet registered in the database
 		} else {
-			return Promise.resolve(false);
+			return false;
 		};
 	});
 };
