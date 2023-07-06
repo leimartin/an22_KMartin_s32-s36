@@ -24,4 +24,4 @@ app.use(express.urlencoded({extended: true}));
 // define the /users string to be included for all users routes denied in the 'user' route file
 app.use('/course', courseRoutes);
 
-app.listen(process.env.PORT || 4000, () => { console.log(`API is now online on port ${ process.env.PORT || 4000}`)});
+app.listen(process.env.PORT || 4000, () => { console.log(`Server Running on Localhost:${ process.env.PORT || 4000}`)});
