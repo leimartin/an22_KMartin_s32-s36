@@ -16,12 +16,12 @@ const router = express.Router();
 const courseController = require('../controllers/courseControllers')
 
 
-router.post('/checkEmail', (req, res) => {
-	courseController.checkEmailExists(req.body)
+router.post('/courseCode', (req, res) => {
+	courseController.checkCourseCodeExists(req.body)
 	.then(resultfromController => res.send(resultfromController))
 	.catch(error => {
-    	console.error('Error checking email:', error);
-    	res.status(500).send('An error occurred while checking the email.');
+    	console.error('Error checking course code:', error);
+    	res.status(500).send('An error occurred while checking the course code.');
     }); 
 });
 

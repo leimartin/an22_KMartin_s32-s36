@@ -8,10 +8,10 @@ const Course = require('../models/Course');
 		- use the 'then' method to send a response back to the frontend applicaiton based on the result
 */
 
-module.exports.checkEmailExists = (req) => {
+module.exports.checkCourseCodeExists = (req) => {
 	console.log(req)
 	// the result is sent back to the frontend via the 'then' method found in the route file
-	return Course.find({ email: req.email })
+	return Course.find({ courseCode: req.courseCode })
 
 	.then(result => {
 		// the find method returns a record if a match is found
